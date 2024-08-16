@@ -56,4 +56,28 @@ function Compras(c){
 
 console.log(Compras(51))
 
-//Var
+//Exercise 4 parametro sin retorno
+function Suma(s,f){
+    var Sumas= s+f
+    console.log("La suma es: ",Sumas )
+}
+Suma(5,3)
+
+//Exercise 5 parametro con retorno
+function Resta(f,g){
+    const Resta = f-g
+    return Resta
+}
+console.log("La resta es: ",Resta(5,3)) 
+
+//Exercise 6 sin parametro sin retorno
+function Hola(){
+    console.log("Mi nombre es Jerxon")
+}
+Hola()
+//Exercise 7 sin parametro con retorno
+function Division(){
+    let Division = 7/2
+    return Division
+}
+console.log("La division es:",Division())
