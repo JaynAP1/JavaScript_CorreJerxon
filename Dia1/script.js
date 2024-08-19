@@ -1,3 +1,39 @@
+const num1Input = document.getElementById('num1');
+const num2Input = document.getElementById('num2');
+const sumarBtn = document.getElementById('sumar');
+const restarBtn = document.getElementById("restar");
+const dividirBtn = document.getElementById("dividir");
+const multiplicarBtn = document.getElementById("multiplicar");
+const resultadoP = document.getElementById('resultado');
+
+sumarBtn.addEventListener('click', (e) => {
+	const num1 = parseFloat(num1Input.value);
+	const num2 = parseFloat(num2Input.value);
+	const suma = num1 + num2;
+	resultadoP.textContent = `La suma es: ${suma}`;
+});
+
+restarBtn.addEventListener("click", (e) =>{
+    const num1 = parseFloat(num1Input.value);
+	const num2 = parseFloat(num2Input.value);
+	const resta = num1 - num2;
+    resultadoP.textContent = `La resta es: ${resta}`;
+});
+
+dividirBtn.addEventListener("click", (e) =>{
+    const num1 = parseFloat(num1Input.value);
+	const num2 = parseFloat(num2Input.value);
+	const dividir = num1 / num2;
+    resultadoP.textContent = `La division es: ${dividir}`;
+});
+
+multiplicarBtn.addEventListener("click", (e) =>{
+    const num1 = parseFloat(num1Input.value);
+	const num2 = parseFloat(num2Input.value);
+	const dividir = num1 * num2;
+    resultadoP.textContent = `La multiplicacion es: ${dividir}`;
+});
+
 //Hello world
 console.log("Hello world");
 
@@ -61,8 +97,8 @@ function Suma(s,f){
     var Sumas= s+f
     console.log("La suma es: ",Sumas )
 }
-Suma(5,3)
-
+Suma(Sumas,Sumas2)
+,
 //Exercise 5 parametro con retorno
 function Resta(f,g){
     const Resta = f-g
@@ -80,4 +116,4 @@ function Division(){
     let Division = 7/2
     return Division
 }
-console.log("La division es:",Division())
+console.log("La division es:",Division());
