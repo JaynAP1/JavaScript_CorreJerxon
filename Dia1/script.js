@@ -97,8 +97,8 @@ function Suma(s,f){
     var Sumas= s+f
     console.log("La suma es: ",Sumas )
 }
-Suma(Sumas,Sumas2)
-,
+Suma(1,2)
+
 //Exercise 5 parametro con retorno
 function Resta(f,g){
     const Resta = f-g
