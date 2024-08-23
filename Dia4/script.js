@@ -42,10 +42,10 @@ fetch("Data.json")
         
         const Nombre = document.getElementById("Name");
         const Edad = document.getElementById("date");
-        const Calle = document.getElementById("street")
-        const NumeroC = document.getElementById("number")
-        const Ciudad = document.getElementById("city")
-        const Email = document.getElementById("mail")
+        const Calle = document.getElementById("street");
+        const NumeroC = document.getElementById("number");
+        const Ciudad = document.getElementById("city");
+        const Email = document.getElementById("mail");
 
         Nombre.addEventListener("change",(e)=>{
             var NombreAlmacenado = e.target.value;
