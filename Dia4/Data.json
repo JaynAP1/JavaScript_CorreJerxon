@@ -16,15 +16,16 @@
         {
             "nivel": "Secundaria",
             "institucion": "Instituto Secundario",
-            "anio_inicio": 2000,
-            "anio_fin": 2005
+            "titulo": "Bachiller",
+            "anioinicio": 2000,
+            "aniofin": 2005
         },
         {
             "nivel": "Universidad",
             "institucion": "Universidad Ejemplar",
             "titulo": "Licenciatura en Ciencias",
-            "anio_inicio": 2006,
-            "anio_fin": 2010
+            "anioinicio": 2006,
+            "aniofin": 2010
         }
     ],
     "experiencia_laboral": [
