@@ -140,7 +140,7 @@ fetch("Data.json")
                     Infor["experiencia_laboral"].splice(i,1)
                 };
             };
-        });
+        });|
     });
 });
 
