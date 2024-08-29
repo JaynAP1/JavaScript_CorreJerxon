@@ -10,7 +10,7 @@ fetch("Data.json")
             Data[0].products.forEach(Datos => {
                 const row = document.createElement("tr");
 
-                row.innerHTML += `<td>${Datos.id}</td> <td>${Datos.name}</td> <td>${Datos.category}</td> <td>${Datos.price}</td> <td>${Datos.quantityInStock}</td> <td>${Datos.supplierId}</td> <td><button id=DeleteProduct${Datos.id}>Delete</button><button id=EditB${Datos.id}>Edit</button></td><div id=editss></div>`;
+                row.innerHTML = `<td>${Datos.id}</td> <td>${Datos.name}</td> <td>${Datos.category}</td> <td>${Datos.price}</td> <td>${Datos.quantityInStock}</td> <td>${Datos.supplierId}</td> <td><button id=DeleteProduct${Datos.id}>Delete</button><button id=EditB${Datos.id}>Edit</button></td><div id=editss></div>`;
                 Table.appendChild(row);
 
                 const DeleteButton = document.getElementById(`DeleteProduct${Datos.id}`);

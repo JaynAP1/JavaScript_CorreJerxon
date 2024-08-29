@@ -8,6 +8,14 @@
                 "price": 999.99,
                 "quantityInStock": 50,
                 "supplierId": 101
+            },
+            {
+                "id": 2,
+                "name": "Laptop",
+                "category": "Electronics",
+                "price": 999.99,
+                "quantityInStock": 50,
+                "supplierId": 101
             }
         ],
         "suppliers": [
