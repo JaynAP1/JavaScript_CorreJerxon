@@ -130,7 +130,7 @@ fetch("Data.json")
                 Id:
                 <input type="number" value=${Edit[0].id} id="IdSU">
                 Name:
-                <i nput type="text"value=${Edit[0].name}  id="NameSU">
+                <input type="text"value=${Edit[0].name}  id="NameSU">
                 Coctact:
                 <input type="number" id="NumberPhoneU" value=${Edit[0].contactInfo.phone}>
                 <input type="email" id="EmailU" value=${Edit[0].contactInfo.email}>

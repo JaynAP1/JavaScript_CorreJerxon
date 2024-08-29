@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(92, 92, 92);
+    color: white;
+}
+.Container{
+    text-align: center;
+}
+table{
+    margin: 2em auto;
+}
+button{
+    border: none;
+    background-color: rgb(80, 71, 201);
+    border-radius: 2em;
+    padding: 0.5em 2em 0.5em 2em;
+    margin-left: 1em;
+    color: white;
+}
+input{
+    border: none;
+    border-radius: 2em;
+    height: 2em;
+}
+select{
+    border: none;
+    border-radius: 2em;
+    height: 2em;
+}

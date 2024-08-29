@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="Container">
+        <h1>Products</h1>
+        <div class="Product">
+            <h2>Add Product</h2>
+            <form id="AddProducts">
+                Id:
+                <input type="number" id="Id" required>
+                Name:
+                <input type="text" required id="Name">
+                Category:
+                <select name="Category" id="Category" required>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Mechanical">Mechanical</option>
+                </select>
+                Price:
+                <input type="number" name="Price" id="Price" required>
+                QuantityStock:
+                <input type="number" id="QuantityStock" required>
+                <button type="submit">Guardar</button>
+            </form>
+            <table id="Table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>QuantityStock</th>
+                        <th>SupplierId</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="Supplier">
+            <h1>Suppliers</h1>
+            <h2>Add Suppliers</h2>
+            <form id="AddSuppliers">
+                Id:
+                <input type="number" id="IdS" required>
+                Name:
+                <input type="text" required id="NameS">
+                Coctact:
+                <input type="text" id="NumberPhone" placeholder="NumberPhone">
+                <input type="email" id="Email" placeholder="Email">
+                <input type="text" id="Address" placeholder="Address">
+                <button type="submit">Guardar</button>
+            </form>
+            <table id="TableS">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>NumberPhone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="Order">
+            <h1>Orders</h1>
+            <h2>Add Orders</h2>
+            <form id="AddOrders"> 
+                Id:
+                <input type="number" id="IdO" required>
+                ProductID:
+                <input type="number" required id="ProductID">
+                Quantity:
+                <input type="number" id="Quantity" required>
+                <button type="submit">Guardar</button>
+            </form>
+            <table id="TableO">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>ProductID</th>
+                        <th>Quantity</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Delete/Edit</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
