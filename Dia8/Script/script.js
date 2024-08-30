@@ -69,6 +69,58 @@ function AddPeople(){
             `
         });
 
+        let Films = Data.films
+        Films.forEach(Filmes => {
+          fetch(Filmes)
+          .then(films => films.json())
+          .then(Peliculas =>{
+            let WriteFilms = document.getElementById("Films");
+            WriteFilms.innerHTML += `
+            <table>
+                <tbody>
+                    <tr>
+                    <td>Name:</td>
+                    <td>${Peliculas.title}</td>
+                    </tr>
+                    <tr>
+                    <td>Episode id:</td>
+                    <td>${Peliculas.episode_id}</td>
+                    </tr>
+                    <tr>
+                    <td>Opening crawl:</td>
+                    <td>${Peliculas.opening_crawl}</td>
+                    </tr>
+                    <tr>
+                    <td>Director:</td>
+                    <td>${Peliculas.director}</td>
+                    </tr>
+                    <tr>
+                    <td>Producer:</td>
+                    <td>${Peliculas.producer}</td>
+                    </tr>
+                    <tr>
+                    <td>Release date:</td>
+                    <td>${Peliculas.release_date}</td>
+                    </tr>
+                    <tr>
+                    <td>Created:</td>
+                    <td>${Peliculas.created}</td>
+                    </tr>
+                    <tr>
+                    <td>Edited:</td>
+                    <td>${Peliculas.edited}</td>
+                    </tr>
+                    <tr>
+                    <td>Url: </td>
+                    <td>${Peliculas.url}</td>
+                    </tr>
+                    <hr>
+                </tbody>
+            </table>
+            `
+          })
+        });
+
         let Species = Data.species[0]
         fetch(Species)
         .then(specie => specie.json())
@@ -130,6 +182,164 @@ function AddPeople(){
              `
         });
         
+        let Vehicles = Data.vehicles
+        Vehicles.forEach(Vehiculos => {
+          fetch(Vehiculos)
+          .then(veiculos => veiculos.json())
+          .then(Vehiculo =>{
+            let WritingVehicles = document.getElementById("Vehicles");
+            WritingVehicles.innerHTML += `
+            <table>
+                <tbody>
+                    <tr>
+                    <td>Name:</td>
+                    <td>${Vehiculo.name}</td>
+                    </tr>
+                    <tr>
+                    <td>Model:</td>
+                    <td>${Vehiculo.model}</td>
+                    </tr>
+                    <tr>
+                    <td>Manufacture:</td>
+                    <td>${Vehiculo.manufacturer}</td>
+                    </tr>
+                    <tr>
+                    <td>Cost in credits:</td>
+                    <td>${Vehiculo.cost_in_credits}</td>
+                    </tr>
+                    <tr>
+                    <td>Length:</td>
+                    <td>${Vehiculo.length}</td>
+                    </tr>
+                    <tr>
+                    <td>Max atmosphering speed:</td>
+                    <td>${Vehiculo.max_atmosphering_speed}</td>
+                    </tr>
+                    <tr>
+                    <td>Crew:</td>
+                    <td>${Vehiculo.crew}</td>
+                    </tr>
+                    <tr>
+                    <td>Passengers:</td>
+                    <td>${Vehiculo.passengers}</td>
+                    </tr>
+                    <tr>
+                    <td>Cargo capacity: </td>
+                    <td>${Vehiculo.cargo_capacity}</td>
+                    </tr>
+                    <tr>
+                    <td>Consumables:</td>
+                    <td>${Vehiculo.consumables}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <td>Vehicle class:</td>
+                    <td>${Vehiculo.vehicle_class}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <td>Created:</td>
+                    <td>${Vehiculo.created}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <td>Edited:</td>
+                    <td>${Vehiculo.edited}</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                    <td>Url:</td>
+                    <td>${Vehiculo.url}</td>
+                    </tr>
+                    <tr>
+                    <hr>
+                </tbody>
+            </table>
+            `
+          })
+        })
+
+        let Starships = Data.starships
+        Starships.forEach(Navecitas=>{
+          fetch(Navecitas)
+          .then(Naveci => Naveci.json())
+          .then(Naves =>{
+            console.log(Naves.name)
+            let WritingStarships = document.getElementById("Starships");
+            WritingStarships.innerHTML += `
+            <table>
+                <tbody>
+                    <tr>
+                    <td>Name:</td>
+                    <td>${Naves.name}</td>
+                    </tr>
+                    <tr>
+                    <td>Model:</td>
+                    <td>${Naves.model}</td>
+                    </tr>
+                    <tr>
+                    <td>Manufacture:</td>
+                    <td>${Naves.manufacturer}</td>
+                    </tr>
+                    <tr>
+                    <td>Cost in credits:</td>
+                    <td>${Naves.cost_in_credits}</td>
+                    </tr>
+                    <tr>
+                    <td>Length:</td>
+                    <td>${Naves.length}</td>
+                    </tr>
+                    <tr>
+                    <td>Max atmosphering speed:</td>
+                    <td>${Naves.max_atmosphering_speed}</td>
+                    </tr>
+                    <tr>
+                    <td>Crew:</td>
+                    <td>${Naves.crew}</td>
+                    </tr>
+                    <tr>
+                    <td>Passengers:</td>
+                    <td>${Naves.passengers}</td>
+                    </tr>
+                    <tr>
+                    <td>Cargo capacity: </td>
+                    <td>${Naves.cargo_capacity}</td>
+                    </tr>
+                    <tr>
+                    <td>Consumables:</td>
+                    <td>${Naves.consumables}</td>
+                    </tr>
+                    <tr>
+                    <td>Hyperdrive rating:</td>
+                    <td>${Naves.hyperdrive_rating}</td>
+                    </tr>
+                    <tr>
+                    <td>MGLT:</td>
+                    <td>${Naves["MGLT"]}</td>
+                    </tr>
+                    <tr>
+                    <td>Starship class:</td>
+                    <td>${Naves.starship_class}</td>
+                    </tr>
+                    <tr>
+                    <td>Created:</td>
+                    <td>${Naves.created}</td>
+                    </tr>
+                    <tr>
+                    <td>Edited:</td>
+                    <td>${Naves.edited}</td>
+                    </tr>
+                    <tr>
+                    <td>Url:</td>
+                    <td>${Naves.url}</td>
+                    </tr>
+                    <hr>
+                </tbody>
+            </table>
+            `
+          })
+        })
+
         let Cuerpo = document.getElementById("Cuerpo");
         Cuerpo.innerHTML= `
         <tr>
@@ -192,9 +402,7 @@ function AddPeople(){
                 <td>Vehicles:</td> 
                 <td>
                   <div class="card text-bg-light mb-3" style="max-width: 50rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Light card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-body" id="Vehicles">
                     </div>
                 </td>    
               </tr>
@@ -202,23 +410,21 @@ function AddPeople(){
                 <td>Starships:</td> 
                 <td>
                   <div class="card text-bg-light mb-3" style="max-width: 50rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Light card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-body" id="Starships">
                     </div>
                 </td>    
               </tr>
               <tr>
                 <td>Created:</td> 
-                <td></td>    
+                <td>${Data.created}</td>    
               </tr>
               <tr>
                 <td>Edited:</td> 
-                <td></td>    
+                <td>${Data.edited}</td>    
               </tr>
               <tr>
                 <td>Url:</td> 
-                <td></td>    
+                <td>${Data.url}</td>    
               </tr>
         `
     })
