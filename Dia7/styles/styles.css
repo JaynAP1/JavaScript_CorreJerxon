@@ -1,0 +1,31 @@
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+input{
+    border-radius: 2em;
+    border: 1px solid gray;
+    margin: 1em;
+    padding: 0.3em 1em ;
+    text-align: center;
+}
+.InformationHero img{
+    width: 10em;
+    padding: 1em;
+    border-radius: 2em;
+}
+.InformationHero{
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    margin-top: 1em;
+    background-color: white;
+    width: 40vw;
+    border-radius: 2em;
+}
+.BothData{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1em;
+}
