@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Oxanium';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/oxanium/v19/RrQQboN_4yJ0JmiMe2zE0YBB.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+
+
+body{
+    background-image: url("/Dia9/images/fondo.jpg");
+    margin: 5em;
+    font-family: "Oxanium";
+}
+.Container{
+    margin: 0em auto;
+    width: 20em;
+}
+.Content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -29em;
+}
+.Content img{
+    width: 7em;
+    position: relative;
+    left: 8em;
+}
+.Content h2{
+    position: absolute;
+    left: 6em;
+    top: 6.5em;
+    width: 10em;
+}
+.Content span{
+    color: gray;
+}
+input{
+    position: absolute;
+    top: 20em;
+    left: 3em;
+    height: 3em;
+    width: 22em;
+}
+.Botones{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 22em;
+    left: 1.5em;
+}
+button{
+    background-color: #424242;
+    color: white;
+    height: 4em;
+    width: 10em;
+    margin-left: 2em;
+}
