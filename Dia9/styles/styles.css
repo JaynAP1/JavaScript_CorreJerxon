@@ -1,18 +1,21 @@
-@font-face {
-    font-family: 'Oxanium';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/oxanium/v19/RrQQboN_4yJ0JmiMe2zE0YBB.woff2) format('woff2');
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap&#39');
 
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Oxanium', cursive;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium';
+}
 
 body{
     background-image: url("/Dia9/images/fondo.jpg");
     margin: 5em;
-    font-family: "Oxanium";
 }
 .Container{
     margin: 0em auto;
@@ -22,7 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -29em;
+    top: -28em;
 }
 .Content img{
     width: 7em;
@@ -31,7 +34,7 @@ body{
 }
 .Content h2{
     position: absolute;
-    left: 6em;
+    left: 7em;
     top: 6.5em;
     width: 10em;
 }
@@ -41,9 +44,13 @@ body{
 input{
     position: absolute;
     top: 20em;
-    left: 3em;
-    height: 3em;
+    left: 3.5em;
     width: 22em;
+    height: 3em;
+    -webkit-box-shadow: -6px 5px 0px 0px rgb(93, 93, 93);
+    -moz-box-shadow: -6px 5px 0px 0px rgba(93, 93, 93);
+    box-shadow: -6px 5px 0px 0px rgba(93, 93, 93);
+    border-radius: 0.5vw;
 }
 .Botones{
     display: flex;
@@ -51,11 +58,19 @@ input{
     position: absolute;
     top: 22em;
     left: 1.5em;
+    
 }
 button{
     background-color: #424242;
     color: white;
-    height: 4em;
-    width: 10em;
-    margin-left: 2em;
+    margin-left: 3em;
+    width: 8.5em;
+    height: 3em;
+    background-color: rgb(83, 81, 81);
+    color: white;
+    -webkit-box-shadow: -6px 5px 0px 0px rgb(25, 25, 25);
+    -moz-box-shadow: -6px 5px 0px 0px rgba(25, 25, 25);
+    box-shadow: -6px 5px 0px 0px rgba(25, 25, 25);
+    border-radius: 0.5vw;
+    cursor: pointer;
 }

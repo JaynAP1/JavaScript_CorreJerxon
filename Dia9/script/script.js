@@ -1,11 +1,14 @@
 //Pokedex
 
-document.getElementById("IdPoke").addEventListener("input", (e)=>{
-    let GetId = document.getElementById("IdPoke").value;
 
-    let Api = "https://pokeapi.co/api/v2/pokemon/"
 
-    function Completa(){
+function Completa(){
+    
+    document.getElementById("IdPoke").addEventListener("input", (e)=>{
+        let GetId = document.getElementById("IdPoke").value;
+    
+        let Api = "https://pokeapi.co/api/v2/pokemon/"
+
         fetch(Api+GetId)
         .then(res => res.json())
         .then(Pokeapi=>{
@@ -18,27 +21,22 @@ document.getElementById("IdPoke").addEventListener("input", (e)=>{
         <audio autoplay src="${Pokeapi.cries.latest}">
         </audio>
         <img src="${Pokeapi.sprites.other.showdown.front_default}">`
-    
+
+        let newID = 0
+
         document.getElementById("Before").addEventListener("click", (e) => {
             newID = Pokeapi.id - 1
             GetId = String(newID)
-            Completa()
         })
         document.getElementById("After").addEventListener("click",(e)=>{
-            console.log(Pokeapi.id)
             newID = Pokeapi.id + 1
-            console.log(newID)
             GetId = String(newID)
-            console.log(GetId)
-            Completa()
         })
-    })
-    }
-    Completa()
-    
-
-
+        Completa()
 })
+})
+}
+Completa()
 
 
 
