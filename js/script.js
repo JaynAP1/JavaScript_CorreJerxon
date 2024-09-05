@@ -14,27 +14,31 @@ let Lista = ["styles/images/Pokedex.png","styles/images/Valorant.png","styles/im
 
 var linkEnvio = "Dia10/index.html"
 
-Enviar.addEventListener("click", Envio)
-
-function Envio(){
-    window.location.href = linkEnvio
-}
-
 Prev.addEventListener("click", Antes)
 Next.addEventListener("click", Despues)
 function Antes(){
     if (defaul > 0){
         defaul -= 1;
-        LinkVinculo.textContent = Names[defaul]
         Imagen.src = Lista[defaul]
         linkEnvio = Links[defaul]
+        Prev.textContent = Names[defaul-1]
+        Next.textContent = Names[defaul+1]
+        if (defaul-1){
+            Prev.style = "visibility:hidden;"
+            Next.style = "visibility:visible;"
+        }
     }
 }
 function Despues(){
     if (defaul < 2){
         defaul += 1;
-        LinkVinculo.textContent = Names[defaul]
         Imagen.src = Lista[defaul]
         linkEnvio = Links[defaul]
+        Prev.textContent = Names[defaul-1]
+        Next.textContent = Names[defaul+1]
+        if (defaul+1){
+            Prev.style = "visibility:visible;"
+            Next.style = "visibility:hidden;"
+        }
     }
 }

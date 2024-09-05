@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to top,#000013,#000000);
+    background: linear-gradient(to top,#000033,#000000);
     min-height: 100vh;
     color: white;
 }
@@ -11,7 +11,13 @@ header{
 .Links button{
     background-color: transparent;
     color: white;
-    border: none;
+    border-radius: 2em;
+    border-color: white;
+    padding: 0em 2em 0em 2em;
+    transition: all 300ms ease;
+}
+.Links button:hover{
+    transform: scale(1.1);
 }
 .Contenido{
     display: flex;
@@ -21,6 +27,10 @@ header{
 .Proyectos img{
     width: 50em;
     border-radius: 2em;
+    transition: all 300ms ease;
+}
+.Proyectos img:hover{
+    transform: scale(1.1);
 }
 .Links{
     display: flex;
@@ -33,12 +43,34 @@ header{
     flex-direction: column;
     justify-content: center;
 }
-
 .Buttons{
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
 }
+.Buttons button {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+    
+  }
+  .Buttons button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+  }
 .Data{
     margin-top: 6em;
     text-align: center;
@@ -47,6 +79,37 @@ header{
     border-radius: 20em;
 }
 footer{
+    margin: 5em auto;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+}
+footer button {
+    margin-top: 3em;
+    height: 2em;
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;    
+}
+footer button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+    
+.Texto{
+    width: 20em;
+    visibility: visible;
 }
