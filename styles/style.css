@@ -1,0 +1,52 @@
+body{
+    background: linear-gradient(to top,#000013,#000000);
+    min-height: 100vh;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+.Links button{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.Contenido{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.Proyectos img{
+    width: 50em;
+    border-radius: 2em;
+}
+.Links{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+.Pantalla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+.Data{
+    margin-top: 6em;
+    text-align: center;
+}
+.Data img{
+    border-radius: 20em;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
