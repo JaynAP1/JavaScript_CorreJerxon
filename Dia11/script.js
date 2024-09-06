@@ -10,6 +10,7 @@ const Icono3 = document.getElementById("Icono3");
 const Icono4 = document.getElementById("Icono4");
 const Icono5 = document.getElementById("Icono5");
 const Icono6 = document.getElementById("Icono6");
+Icono1.style = "background-position-y: 0em;"
 
 function CallApi(){
     fetch(url)
