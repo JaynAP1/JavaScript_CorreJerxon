@@ -18,7 +18,6 @@
 .Datos{
     background-color: white;
     width: 50vw;
-    height: 25em;
     position: relative;
     margin: -12em auto;
 }
@@ -51,11 +50,15 @@
 .CajaText p{
     color: gray;
 }
+.CajaText h1{
+    font-size: clamp(1em, 3vw, 2rem);
+}
 .CajaVinculos{
     margin: 0 auto;
-    width: 35em;
+    width: 40vw;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .Icono1{
     background-image: url(card_icons.png);
