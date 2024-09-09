@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded",(e)=>{
     const DatosContenedor = document.querySelector(".Options");
-    const TaskInput = document.getElementById("TaskInput").value;
+    const TaskInput = document.getElementById("TaskInput");
     const Button = document.getElementById("AddTask");
 
     async function FecthData() {
-        const res = await fetch("https://6674179975872d0e0a950e53.mockapi.io/todoList");
+        const res = await fetch("https://66df3345de4426916ee3dd8d.mockapi.io/Tareas");
         Data = await res.json();
         return Data;
     }
@@ -51,7 +51,63 @@ document.addEventListener("DOMContentLoaded",(e)=>{
             };
             DatosContenedor.appendChild(CapDiv);
         });
+        document.querySelectorAll('.Completado').forEach(Button=>{
+            Button.addEventListener("click",BotonCompletado)
+        })
+        document.querySelectorAll('.Eliminado').forEach(Button=>{
+            Button.addEventListener("click",BotonEliminado)
+        })
     }
+
+    async function AddNewTask() {
+        const task = TaskInput.value;
+        if(task.trim() === ''){
+            return;
+        }
+        
+        await fetch('https://66df3345de4426916ee3dd8d.mockapi.io/Tareas',{
+            method: 'POST',
+            headers:{
+                'Content-Type' : 'application/json',
+            },
+            body:JSON.stringify({
+                task,
+                status:"On hold"
+            })
+        });
+        TaskInput.value = '';
+        const Data = await FecthData();
+        DisplayCapsule(Data);
+    };
+
+    async function BotonCompletado(event) {
+        const id = event.target.getAttribute('data-id')
+        await fetch (`https://66df3345de4426916ee3dd8d.mockapi.io/Tareas/${id}`,{
+            method: 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body:JSON.stringify({status:'ready'})
+        });
+        const Data = await FecthData();
+        DisplayCapsule(Data)
+
+    }
+    async function BotonEliminado(evento) {
+        const Data = await FecthData();
+        const id = evento.target.getAttribute('data-id')
+        await fetch (`https://66df3345de4426916ee3dd8d.mockapi.io/Tareas/${id}`,{
+            method: 'DELETE',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+        });
+        DisplayCapsule(Data)
+    }
+
+    Button.addEventListener("click",AddNewTask);
+
+
     FecthData().then(Data =>{
         DisplayCapsule(Data);
     })
