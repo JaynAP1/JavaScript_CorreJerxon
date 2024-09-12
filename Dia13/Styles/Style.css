@@ -5,18 +5,31 @@ body{
     background-image: url(img/Fondo.jpg);
     background-size: 100vw;
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: #024130;
 }
 
 .Home{
-    margin: 40vh auto;
-    width: 10em;
+  margin: 30vh auto;
+  width: 20em;
+  text-align: center;
 }
+.CajaTextoW{
+  position: absolute;
+  left: 50em;
+  top: 25em;
+  text-align: center;
+}
+.CajaTextoW h1{
+  width: 10em;
+  border-radius: 2em;
+  padding: 0.7em 2em;
+}
+
 .CartasJugador{
     display: none;
     justify-content: space-between;
     position: relative;
-    top: 35em;
+    top: 15em;
 }
 .Botones{
     width:10em;
@@ -41,15 +54,22 @@ body{
     left: 10em;
 }
 .Cartas img{
-    transform: scale(0.7);
-    transition: all 400ms ease;
+  scale: 0.8;
+  transition: all 400ms ease;
+  transform: translateY(30%);
 }
 .Cartas img:hover{
-    transform: scale(0.8);
+    transform: scale(1);
 }
 
-
-
+.CartasMaquina{
+  position: relative;
+  top: 2em;
+}
+.CartasMaquina img{
+  transform: scale(0.7);
+  transition: all 400ms ease;
+}
 
 
 
