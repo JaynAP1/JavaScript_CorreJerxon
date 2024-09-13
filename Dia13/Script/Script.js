@@ -15,9 +15,10 @@ const Texto = document.getElementById("Text");
 
 //Eventos
 Start.addEventListener("click",()=>{
-    CallDeck()
     Home.style = "display:none"
     CajaCartasJugador.style="display:flex"
+    Botones.style = "display:block"
+    CajaMaquina.style = "display:block"
 })
 
 //Variables
@@ -34,6 +35,7 @@ function aleatorio(inferior, superior) {
 }
 
 function CallDeck(){
+    
     fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
     .then(Res => Res.json())
     .then(Deck =>{
@@ -94,7 +96,7 @@ function CallCards(id){
                 Card.value = 10
             }
             else if(Card.value === "ACE"){
-                
+                Card.value = 11
             }
             else{
                 Card.value = parseInt(Card.value)
@@ -215,5 +217,4 @@ function GoTurn(id){
         }
     }
 }
-
-
+CallDeck()

@@ -1,11 +1,15 @@
 *{
-    margin: 0;
+  margin: 0;
 }
 body{
-    background-image: url(img/Fondo.jpg);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-color: #024130;
+  background-image: url(img/Fondo.jpg);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-color: #024130;
+}
+.Cartas{
+  display: flex;
+  justify-content: center;
 }
 
 .Home{
@@ -26,32 +30,45 @@ body{
 }
 
 .CartasJugador{
-    display: none;
-    justify-content: space-between;
-    position: relative;
-    top: 15em;
+  display: none;
+  justify-content: space-between;
+  position: relative;
+  top: 30em;
 }
 .Botones{
-    width:10em;
-    margin-top: 7em;
+  width:10em;
+  display: none;
 }
 .Botones button{
-    border: none;
-    background-color: rgb(255, 255, 255);
-    padding: 1em 2em;
-    color: rgb(0, 0, 0);
-    border-radius: 2em;
-    transition: all 300ms ease;
-    margin-top: 1em;
-    width: 10em;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  padding: 1em 2em;
+  color: rgb(0, 0, 0);
+  border-radius: 2em;
+  transition: all 300ms ease;
+  margin-top: 1em;
+  width: 10em;
+}
+#Pasar{
+  position: absolute;
+  left: 70em;
+  top: 30em;
+}
+.Botones img{
+  transform: scale(0.6);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.Botones img:hover{
+  transform: scale(0.8);
 }
 .Botones button:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .Cartas{
-    top: 35em;
-    left: 10em;
+  top: 35em;
+  left: 10em;
 }
 .Cartas img{
   scale: 0.8;
@@ -59,10 +76,11 @@ body{
   transform: translateY(30%);
 }
 .Cartas img:hover{
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .CartasMaquina{
+  display: none;
   position: relative;
   top: 2em;
 }
@@ -70,9 +88,11 @@ body{
   transform: scale(0.7);
   transition: all 400ms ease;
 }
-
-
-
+#Restart{
+  position: absolute;
+  top: 60em;
+  left: 10em;
+}
 
 /* From Uiverse.io by doniaskima */ 
 .btn-23,
