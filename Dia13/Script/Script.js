@@ -10,6 +10,7 @@ const Start = document.getElementById("Start");
 const Pedir = document.getElementById("Pedir");
 const Pasar = document.getElementById("Pasar");
 
+
 //Textos
 const Texto = document.getElementById("Text");
 
@@ -19,7 +20,9 @@ Start.addEventListener("click",()=>{
     CajaCartasJugador.style="display:flex"
     Botones.style = "display:block"
     CajaMaquina.style = "display:block"
+    CallDeck()
 })
+
 
 //Variables
 var ValorJugador = 0
@@ -35,7 +38,6 @@ function aleatorio(inferior, superior) {
 }
 
 function CallDeck(){
-    
     fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
     .then(Res => Res.json())
     .then(Deck =>{
@@ -82,6 +84,10 @@ function CallCards(id){
             Texto.style="background-color: rgb(255, 255, 255);"
             Texto.textContent="Ganaste"
             Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+            const Restart = document.getElementById("Restart");
+            Restart.addEventListener("click",(e)=>{
+                document.location.reload
+            })
         }
     });
     fetch(`https://deckofcardsapi.com/api/deck/${id}/draw/?count=2`)
@@ -108,6 +114,10 @@ function CallCards(id){
             Texto.style="background-color: rgb(255, 255, 255);"
             Texto.textContent="Perdiste"
             Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+            const Restart = document.getElementById("Restart");
+            Restart.addEventListener("click",(e)=>{
+                document.location.reload
+            })
         }
     })
 }
@@ -137,11 +147,19 @@ function AskCard(id){
                 Texto.style="background-color: rgb(255, 255, 255);"
                 Texto.textContent="Perdiste"
                 Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                const Restart = document.getElementById("Restart");
+                Restart.addEventListener("click",(e)=>{
+                    document.location.reload()
+                })
             }
             else if(ValorJugador == 21){
                 Texto.style="background-color: rgb(255, 255, 255);"
                 Texto.textContent="Ganaste"
                 Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                const Restart = document.getElementById("Restart");
+                Restart.addEventListener("click",(e)=>{
+                    document.location.reload()
+                })
             }
             
         });
@@ -172,11 +190,19 @@ function GoTurn(id){
                     Texto.style="background-color: rgb(255, 255, 255);"
                     Texto.textContent="Ganaste"
                     Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                    const Restart = document.getElementById("Restart");
+                    Restart.addEventListener("click",(e)=>{
+                        document.location.reload()
+                    })
                 }
                 else if(ValorMaquina == 21){
                     Texto.style="background-color: rgb(255, 255, 255);"
                     Texto.textContent="Perdiste"
                     Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                    const Restart = document.getElementById("Restart");
+                    Restart.addEventListener("click",(e)=>{
+                        document.location.reload()
+                    })
                 }
             });
         });
@@ -206,15 +232,22 @@ function GoTurn(id){
                         Texto.style="background-color: rgb(255, 255, 255);"
                         Texto.textContent="Ganaste"
                         Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                        const Restart = document.getElementById("Restart");
+                        Restart.addEventListener("click",(e)=>{
+                            document.location.reload()
+                        })
                     }
                     else if(ValorMaquina == 21){
                         Texto.style="background-color: rgb(255, 255, 255);"
                         Texto.textContent="Perdiste"
                         Botones.innerHTML=`<button id="Restart">Reiniciar</button>`
+                        const Restart = document.getElementById("Restart");
+                        Restart.addEventListener("click",(e)=>{
+                            document.location.reload()
+                        })
                     }
                 });
             });
         }
     }
 }
-CallDeck()
