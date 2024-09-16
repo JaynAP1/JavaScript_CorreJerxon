@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Monserrate";
+    src: url(/font/Montserrat-VariableFont_wght.ttf);
+}
+*{
+    font-family: "Monserrate";
+}
+header{
+    background-color:#3c4fd4 ;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+}
+header input{
+    width: 85% ;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    border: none;
+}
+.User{
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    border: 1px solid #3c4fd4;
+    padding: 1.8em 1em 1.8em 1em;
+    margin-top: 1em;
+}
+img{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.Text p{
+    font-weight: bold;
+    font-size: 1.19em;
+    margin-top: -1em;
+}
+.filtro{
+    display: none;
+}
