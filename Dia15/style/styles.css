@@ -1,0 +1,46 @@
+body{
+    overflow: hidden;
+    background-color: rgb(139, 77, 253);
+}
+header{
+    background-color: rgb(139, 77, 253);
+    text-align: center;
+    color: white;
+    line-height: 1em;
+    padding: 2em;
+}
+nav{
+    background-color: rgb(139, 77, 253);
+    width: 4em;
+    position: absolute;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease;
+}
+.Middle{
+    text-align: center;
+    padding: 2em;
+    background-color: white;
+    transition: all 300ms ease;
+}
+.Middle input{
+    width: 70%;
+    padding: 1em;
+    border-radius: 2em;
+}
+i{
+    color: white;
+    margin-top: 2em;
+    transform: scale(1.5);
+    cursor:  pointer;
+}
+#World{
+    margin-top: 60vh;
+}
+.Content{
+    background-color: white;
+    width: auto;
+    height: 100vh;
+}
